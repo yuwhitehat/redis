@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.category.dao.CategoryDAO">
+    <resultMap id="categoryResultMap" type="com.example.category.dataobject.CategoryDO">
+        <id column="id" jdbcType="varchar"  property="id"/>
+        <result column="name" jdbcType="varchar" property="name"/>
+        <result column="description" jdbcType="varchar" property="description"/>
+        <result column="parent_category_id" jdbcType="varchar" property="parentCategoryId"/>
+        <result column="gmt_created" jdbcType="timestamp" property="gmtCreated"/>
+        <result column="gmt_modified" jdbcType="timestamp" property="gmtModified"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.example.category.dataobject.CategoryDO" >
+        insert into ykd_category (id, `name`, description, parent_category_id, gmt_created, gmt_modified)
+        values (#{id,jdbcType=varchar},#{name, jdbcType=varchar}, #{description, jdbcType=varchar}, #{parentCategoryId, jdbcType=varchar}, now(), now())
+    </insert>
+</mapper>
