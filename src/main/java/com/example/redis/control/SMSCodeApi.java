@@ -22,7 +22,7 @@ public class SMSCodeApi {
     private static final Logger LOG = LoggerFactory.getLogger(SMSCodeApi.class);
     private static String MAIL_EMPTY= "100001";
     private static String MAIL_CODE_EMPTY = "100002";
-    private static String MAIL_ERR = "100003";
+    private static String MAIL_ERR = "100004";
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
