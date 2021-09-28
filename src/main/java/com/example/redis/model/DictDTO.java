@@ -4,13 +4,7 @@ package com.example.redis.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @packageName: com.enmonster.platform.ems.dto
- * @description:
- * @author: ChenChu
- * @date: 2020-12-21 17:37:16
- * @version: V1.0.0
- */
+
 @Data
 @NoArgsConstructor
 public class DictDTO {
