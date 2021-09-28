@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Getter
 public enum SystemIdentifyFailEnum {
     UNKNOWN(-1, "未知"),
-    NOPOSITION(0, "无"),
+    NO(0, "无"),
     LINE_LOSS(1, "线损"),
     WIRE_DAMAGE(2, "充电线线断"),
     SHELL_DAMAGE(4, "外壳破损"),
@@ -41,7 +41,7 @@ public enum SystemIdentifyFailEnum {
 
     public static List<DictDTO> getList() {
         List<SystemIdentifyFailEnum> systemIdentifyFailEnums = Lists.newArrayList(
-                SystemIdentifyFailEnum.NOPOSITION,
+                SystemIdentifyFailEnum.NO,
                 SystemIdentifyFailEnum.LINE_LOSS,
                 SystemIdentifyFailEnum.WIRE_DAMAGE,
                 SystemIdentifyFailEnum.SHELL_DAMAGE,
